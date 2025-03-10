@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+}
+
+
+/* Container Styles */
+.page-container {
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Form Layout */
+.form-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #28a745;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Result Display */
+.cost-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(233, 236, 239, 0.8);
+    border-radius: 5px;
+    display: none;
+    color: #333;
+}
+
+/* Autocomplete Suggestions */
+.autocomplete-suggestions {
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    color: black;
+    max-height: 150px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    margin-top: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.autocomplete-suggestion {
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.autocomplete-suggestion:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Indicator */
+.loading {
+    display: none;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}

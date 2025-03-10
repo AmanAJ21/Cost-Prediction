@@ -1,0 +1,44 @@
+/* Footer.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.footer-copyright {
+    margin-bottom: 10px; /* Space below copyright text */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+.footer-nav li {
+    margin: 0 15px; /* Space between links */
+}
+
+.footer-nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-nav a:hover {
+    color: #FFD700; /* Change color on hover */
+}

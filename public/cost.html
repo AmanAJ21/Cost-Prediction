@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <link rel="stylesheet" href="./css/cost.css" />
+  <title>Cost Calculator</title>
+</head>
+
+<body>
+  <header class="header"></header>
+
+  <div class="page-container">
+    <div id="costResult" class="cost-result"></div>
+    <form id="costCalculationForm" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="cityFrom">City 1:</label>
+          <input type="text" id="cityFrom" name="city_from" required aria-label="City 1" autocomplete="off" value="pune" />
+          <div id="cityFromSuggestions" class="autocomplete-suggestions"></div>
+
+          <label for="itemHeight">Height (cm):</label>
+          <input type="number" id="itemHeight" name="height" required aria-label="Height" value="17" />
+
+          <label for="itemMaterial">Material Type:</label>
+          <select id="itemMaterial" name="material" required aria-label="Material Type">
+            <option value="Brass" selected>Brass</option>
+            <option value="Clay">Clay</option>
+            <option value="Aluminium">Aluminium </option>
+            <option value="Wood">Wood</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Stone">Stone</option>
+            <option value="Marble">Marble</option>
+          </select>
+          <label for="itemWidth">Width (cm):</label>
+          <input type="number" id="itemWidth" name="width" required aria-label="Width" value="6" />
+        </div>
+        <div class="form-group">
+          <label for="cityTo">City 2:</label>
+          <input type="text" id="cityTo" name="city_to" required aria-label="City 2" autocomplete="off" value="delhi" />
+          <div id="cityToSuggestions" class="autocomplete-suggestions"></div>
+
+          <label for="itemWeight">Weight (kg):</label>
+          <input type="number" id="itemWeight" name="weight" required aria-label="Weight" value="4128" />
+
+          <label for="transportMethod">Transport Method:</label>
+          <select id="transportMethod" name="transport" required aria-label="Transport Method">
+            <option value="Airways" selected>Airways</option>
+            <option value="Roadways">Roadways</option>
+          </select>
+
+          <label for="travelDistance" style="display: none;">Distance (km):</label>
+          <input type="number" id="travelDistance" name="distance" required aria-label="Distance" value="44"  style="display: none;"/>
+        </div>
+      </div>
+      <div class="button-group">
+        <input type="submit" value="Calculate Cost" class="calculate-button"/>
+        <input type="reset" value="Clear" class="clear-button"/>
+      </div>
+    </form>
+  </div>
+<div class="footer"></div>
+  <script src="./js/cost.js"></script>
+  <script src="./js/loader.js"></script>
+
+</html>

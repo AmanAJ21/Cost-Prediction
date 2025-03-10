@@ -1,0 +1,41 @@
+/* Header.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Padding around the header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center; /* Center items vertically */
+}
+
+.header-title {
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold; /* Bold text */
+}
+
+.header-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+}
+
+.header-nav li {
+    margin-left: 20px; /* Space between links */
+}
+
+.header-nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-nav a:hover {
+    color: #FFD700; /* Change color on hover */
+}

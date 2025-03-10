@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container Styles */
+.container {
+    margin: 0; /* Remove margin */
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    margin:20px auto;
+    max-width: 600px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Form Layout */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.form-group {
+    flex: 1 1 45%; /* Allow flexibility and set a base width */
+    margin: 0 10px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    transition: border-color 0.3s, background 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #28a745;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="submit"],
+input[type="reset"],#calculate-distance
+ {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 0 5px; /* Add margin between buttons */
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+input[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+input[type="reset"]:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Result Display */
+.cost-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(233, 236, 239, 0.8);
+    border-radius: 5px;
+    display: none;
+    color: #333;
+    font-weight: bold; /* Make result text bold */
+}
+
+/* Autocomplete Suggestions */
+.autocomplete-suggestions {
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    color: black;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute; /* Position suggestions absolutely */
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: calc(100% - 20px); /* Adjust width to fit within the container */
+}
+
+.autocomplete-suggestion {
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.autocomplete-suggestion:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Indicator */
+.loading {
+    display: none;
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .form-grid {
+        flex-direction: column; /* Stack form elements on smaller screens */
+    }
+
+    .form-group {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin: 0 0 10px; /* Margin at the bottom */
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        margin: 5px 0; /* Margin between stacked buttons */
+    }
+}

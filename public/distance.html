@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Calculation</title>
+    <link rel="stylesheet" href="/css/distance.css">
+</head>
+<body>
+    <header class="header">
+    </header>
+
+    <main class="container">
+        <p id="result"></p>
+        <p id="error" class="error"></p>
+        <form id="distanceForm">
+            <div class="form-group">
+                <label for="cityA">Origin City:</label>
+                <input type="text" id="cityA" name="cityA" required aria-label="Origin City" />
+            </div>
+
+            <div class="form-group">
+                <label for="cityB">Destination City:</label>
+                <input type="text" id="cityB" name="cityB" required aria-label="Destination City" />
+            </div>
+
+            <div class="form-group">
+                <label for="mode">Mode of Transportation:</label>
+                <select id="mode" name="mode" required aria-label="Mode of Transportation">
+                    <option value="driving">Driving</option>
+                    <option value="walking">Walking</option>
+                    <option value="bicycling">Bicycling</option>
+                    <option value="transit">Transit</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Calculate Distance</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+
+       
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/loader.js"></script>
+    <script src="/js/distance.js"></script>
+</body>
+</html>

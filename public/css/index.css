@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.header {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Padding around the header */
+    text-align: center; /* Center text */
+}
+
+.header nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.header nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Space between links */
+}
+
+.header nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header nav a:hover {
+    color: #FFD700; /* Change color on hover */
+}
+
+main {
+    margin: 20px 0; /* Margin for the main content */
+    padding: 20px; /* Padding for the main content */
+    background-color: white; /* White background for main content */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.footer {
+    text-align: center; /* Center text in footer */
+    padding: 10px; /* Padding for footer */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
